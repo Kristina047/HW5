@@ -23,9 +23,8 @@ public class Main {
         }
 
         System.out.println("Задача 5");
-        int year = 1968;
-        if (year <= 2096 && year % 4 == 0) {
-            System.out.println(year + " Год является високосным");
+        for (int i = 1904; i <= 2096; i=i+4) {
+            System.out.println(i + " Год является високосным");
         }
 
         System.out.println("Задача 6");
@@ -42,14 +41,15 @@ public class Main {
         int total = 0;
         for (int i = 0; i < 12; i++) {
             total = total + money;
+            System.out.println( "Месяц " +i+ ", сумма накоплений равно "+total+" рублей");
         }
-        System.out.println(total);
 
         System.out.println("Задача 9");
-        int moneyMonth = 29000/100;
+        int moneyMonth  = 29000;
+        int moneyPercent = 29000/100;
         int percent = 0;
         for (int i = 1; i <= 12; i++) {
-            percent = percent + moneyMonth;
+            percent =  percent + moneyMonth + moneyPercent;
             System.out.println( "Месяц " +i+ ", сумма накоплений равно "+percent+" рублей");
         }
 
